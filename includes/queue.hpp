@@ -1,5 +1,8 @@
 #pragma once
+
 #include <memory>
+#include <ostream>
+#include <cstddef>
 
 template<typename T>
 class Queue {
@@ -11,10 +14,10 @@ class Queue {
             //Construtor da classe Node
             Node(const T& value
                 ,std::unique_ptr<Node> next = nullptr);
-        }
+        };
         std::unique_ptr<Node> head = nullptr;
-        std::unique_ptr<Node> tail = nullptr;
-        size_t size_queue = 0;
+        Node* tail = nullptr;
+        std::size_t size_queue = 0;
 
     public: 
         //Construtor da classe queue
@@ -30,10 +33,13 @@ class Queue {
         void dequeue();
 
         //Imprime a fila
-        void print(const std::ostream& os) const;
+        void print(std::ostream& os) const;
 
-        //Retorna o início da fila
-        T& head();
+        // Retorna o início da fila, permitindo modificar
+        T& front();
+
+        // Retorna o início da fila apenas para leitura
+        const T& front() const;
 
         //Retorna o tamanho da fila
         std::size_t size() const;
