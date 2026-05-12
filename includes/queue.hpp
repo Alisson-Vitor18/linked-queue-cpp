@@ -21,7 +21,7 @@ class Queue {
 
     public: 
         //Construtor da classe queue
-        Queue();
+        Queue() = default;
 
         //Verifica se a fila está vazia
         bool empty() const;
@@ -44,3 +44,5 @@ class Queue {
         //Retorna o tamanho da fila
         std::size_t size() const;
 };
+
+#include "queue.tpp"
