@@ -36,13 +36,17 @@ O principal objetivo de utilizar estruturas encadeadas é a flexibilidade de tam
 
 ## Complexidade dos métodos implementados
 
+## Complexidade dos métodos implementados
+
 | Método  | Complexidade |
-|----|----|              |
-| Enqueue |     O(1)     |
-| Dequeue |     O(1)     |
-| Empty   |     O(1)     |
-| Size    |     O(1)     |
-| Print   |     O(n)     |
+|----------|---------------|
+| Enqueue | O(1) |
+| Dequeue | O(1) |
+| Empty   | O(1) |
+| Size    | O(1) |
+| Print   | O(n) |
+
+> Onde `n` representa a quantidade de elementos presentes na fila.
 
 > Onde `n` representa a quantidade de elementos presentes na fila./
 
