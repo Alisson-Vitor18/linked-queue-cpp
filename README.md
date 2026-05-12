@@ -48,8 +48,6 @@ O principal objetivo de utilizar estruturas encadeadas é a flexibilidade de tam
 
 > Onde `n` representa a quantidade de elementos presentes na fila.
 
-> Onde `n` representa a quantidade de elementos presentes na fila./
-
 ---
 
 ## Como executar 
@@ -57,4 +55,69 @@ O principal objetivo de utilizar estruturas encadeadas é a flexibilidade de tam
 ```bash
 g++ main.cpp -Iincludes -o program
 ./program
+```
+---
+
+## Exemplo de uso 
+
+```cpp 
+#include <iostream>
+#include "queue.hpp"
+
+int main() {
+    Queue<int> queue;
+
+    queue.enqueue(10);
+    queue.enqueue(20);
+    queue.enqueue(30);
+    queue.enqueue(40);
+    queue.enqueue(50);
+
+    std::cout << "Fila...\n" << std::endl;
+    queue.print(std::cout);
+    std::cout << "Tamanho: " << queue.size() << std::endl;
+
+    std::cout << "\nRemovendo valor " << queue.front() << " da fila..." << std::endl;
+    queue.dequeue();
+
+    std::cout << std::endl;
+
+    std::cout << "Fila...\n" << std::endl;
+    queue.print(std::cout);
+    std::cout << "Tamanho: " << queue.size() << std::endl;
+
+    std::cout << "\nRemovendo valor " << queue.front() << " da fila..." << std::endl;
+    queue.dequeue();
+
+    std::cout << std::endl;
+
+    std::cout << "Fila...\n" << std::endl;
+    queue.print(std::cout);
+    std::cout << "Tamanho: " << queue.size() << std::endl;
+
+    return 0;
+}
+```
+
+### Saída esperada
+
+```bash
+Fila...
+
+[10, 20, 30, 40, 50]
+Tamanho: 5
+
+Removendo valor 10 da fila...
+
+Fila...
+
+[20, 30, 40, 50]
+Tamanho: 4
+
+Removendo valor 20 da fila...
+
+Fila...
+
+[30, 40, 50]
+Tamanho: 3
 ```
