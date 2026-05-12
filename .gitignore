@@ -1,0 +1,9 @@
+#Executáveis
+*.exe
+*.out
+
+#Pasta de build
+build/
+
+#VS Code
+.vscode/
